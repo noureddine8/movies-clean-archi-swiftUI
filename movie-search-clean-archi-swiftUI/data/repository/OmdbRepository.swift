@@ -8,7 +8,7 @@
 import Foundation
 
 class OmdbRepository: MovieRepository {
-    private let apiKey = Secrets.apiKey
+    private let apiKey = Secrets.omdbAPIKey
     private let baseURL = "https://www.omdbapi.com/"
     
     func getMovieDetail(id: String) async throws -> MovieDetail {
