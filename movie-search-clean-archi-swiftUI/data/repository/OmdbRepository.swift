@@ -23,8 +23,8 @@ class OmdbRepository: MovieRepository {
         return dto.toMovieDetailDomain()
     }
     
-    func searchMovies(name: String) async throws -> [Movie] {
-        let urlString = "\(baseURL)?apikey=\(apiKey)&s=\(name)"
+    func searchMovies(query: String) async throws -> [Movie] {
+        let urlString = "\(baseURL)?apikey=\(apiKey)&s=\(query)"
         guard let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") else {
             throw URLError(.badURL)
         }

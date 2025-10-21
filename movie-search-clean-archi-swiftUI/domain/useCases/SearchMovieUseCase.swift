@@ -12,11 +12,11 @@ class SearchMovieUseCase {
         self.movieRepository = movieRepository
     }
     
-    func searchMovies(query: String) async throws -> [Movie] {
+    func searchMovies(name: String) async throws -> [Movie] {
         // Example Business rule: don't search if query is too short
-        guard query.count >= 2 else {
+        guard name.count >= 2 else {
             return []
         }
-        return try await movieRepository.searchMovies(name: query)
+        return try await movieRepository.searchMovies(query: name)
     }
 }

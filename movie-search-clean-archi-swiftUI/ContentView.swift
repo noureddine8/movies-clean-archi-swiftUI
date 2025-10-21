@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    let diContainer = AppDIContainer()
+
     var body: some View {
-        
+        MovieSearchView(viewModel: diContainer.makeMovieSearchViewModel())
     }
 }
 
