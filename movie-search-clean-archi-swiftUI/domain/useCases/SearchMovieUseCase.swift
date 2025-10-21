@@ -17,6 +17,6 @@ class SearchMovieUseCase {
         guard query.count >= 2 else {
             return []
         }
-        return try await movieRepository.searchMovies(query: query)
+        return try await movieRepository.searchMovies(name: query)
     }
 }

@@ -6,6 +6,6 @@
 //
 
 protocol MovieRepository {
-    func searchMovies(query: String) async throws -> [Movie]
+    func searchMovies(name: String) async throws -> [Movie]
     func getMovieDetail(id: String) async throws -> MovieDetail
 }
